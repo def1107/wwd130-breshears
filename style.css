@@ -3,13 +3,24 @@
 :root {
   --primary: #111827;
   --secondary: #374151;
+  --background: #788188;
   --accent-1: #991B1B;
   --accent-2: #cb9a08;
 
   --heading-font:  "Orbitron", sans-serif;
   --paragraph-font: "Inter", sans-serif;
 }
+*{
+    font-size: 16px;
 
+}
+body{
+    background-color: var(--background);
+    margin: 0 auto;
+}
+#content{
+    background-color: var(--background);
+}
 header{
     background-color: var(--secondary);
     display: flex;
@@ -25,7 +36,7 @@ header img{
 }
 nav a{
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     text-decoration: none;
     color: var(--accent-2);
     height: 80px;
@@ -39,6 +50,45 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 0 150px;
+    gap: 0 120px;
     padding: 100px;
+}
+#hero{
+    display: grid;
+    grid-template-rows: 150px 250px 200px;
+    justify-items: center;
+}
+#info{
+    background-color: var(--primary);
+    width: 50%;
+    color: var(--accent-2);
+    grid-row: 2/3;
+    grid-column: 1/2;
+    text-align: center;
+    border: var(--accent-2) solid 10px;
+}
+#hero_links {
+    margin: 35px;
+}
+#hero_links a{
+    text-decoration: none;
+    color: rgb(217, 227, 166);
+    font-size: 25px;
+    margin: 30px;
+}
+#hero_links a:hover{
+    color: rgb(112, 116, 91);
+}
+#hero img{
+    width: 100%;
+    object-fit: cover;
+    height: 600px;
+    grid-row: 1/4;
+    grid-column: 1/2;
+}
+footer{
+    background-color: var(--primary);
+    color: var(--accent-2);
+    width: 100%;
+    height: 100%;
 }
