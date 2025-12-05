@@ -80,6 +80,7 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* ===== Hero部分样式 ===== */
 #hero {
     min-height: 100vh;
     display: flex;
@@ -266,6 +267,7 @@ nav ul li a:hover {
     width: 24px;
     height: 24px;
     object-fit: contain;
+    
 }
 
 footer {
@@ -281,6 +283,7 @@ footer p {
     letter-spacing: 0.5px;
 }
 
+/* ===== 响应式设计 ===== */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
