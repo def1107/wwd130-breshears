@@ -1,1 +1,529 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #374151; 
+    background-color: #ffffff;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+
+:root {
+    --primary-color: #111827;
+    --secondary-color: #374151;
+    --accent1-color: #991B1B;
+    --accent2-color: #A67C00;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#Collin_Breshears {
+    display: flex;
+    align-items: center;
+}
+
+#Collin_Breshears img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent1-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+nav ul li:nth-child(3) a {
+    background-color: var(--accent1-color);
+    color: white;
+}
+
+
+#contact {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5% 60px;
+    margin-top: 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#contact > div {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+#contact h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+#contact .intro-text {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+
+.contact-content {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+
+.contact-info-list {
+    list-style-type: none;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+}
+
+.contact-info-list li {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    position: relative;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.contact-info-list li::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent1-color);
+    border-radius: 50%;
+}
+
+.contact-info-list li:hover {
+    background-color: rgba(153, 27, 27, 0.05);
+    transform: translateX(5px);
+}
+
+.contact-info-list a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-info-list a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
+.pdf-download-section {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.pdf-download-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    background-color: white;  
+    color: var(--accent1-color);  
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent1-color);  
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.pdf-download-link:hover {
+    background-color: var(--accent1-color);  
+    color: white;  
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(153, 27, 27, 0.2);
+}
+
+.pdf-download-link::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/pdf.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+
+.social-links-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-links-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    min-width: 90px;
+}
+
+.social-link-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(153, 27, 27, 0.05);
+}
+
+.social-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent1-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link-item:hover .social-icon-circle {
+    background-color: var(--accent2-color);
+    transform: scale(1.1);
+}
+
+.social-icon-circle img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.social-link-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+
+.back-home {
+    margin: 3rem auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.back-home a {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    border: 2px solid transparent;
+}
+
+.back-home a:hover {
+    color: white;
+    background-color: var(--accent1-color);
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(153, 27, 27, 0.2);
+}
+
+.back-home a::before {
+    content: '←';
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.social-media-icons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: var(--accent1-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    background-color: var(--accent2-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+    font-family: 'Inter', sans-serif;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    #Collin_Breshears {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #contact {
+        padding: 120px 5% 60px;
+    }
+
+    #contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        padding-top: 0;
+    }
+
+    #contact .intro-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content {
+        padding: 2rem;
+        margin: 1rem 0;
+    }
+
+    .contact-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-content p {
+        font-size: 1.1rem;
+    }
+
+    .contact-info-list li {
+        font-size: 1rem;
+        padding-left: 2.5rem;
+    }
+
+    .pdf-download-link {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-media-icons {
+        flex-direction: row;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #contact .intro-text {
+        font-size: 1rem;
+    }
+
+    .contact-content {
+        padding: 1.5rem;
+    }
+
+    .contact-info-list li {
+        font-size: 0.9rem;
+        padding-left: 2rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-link-item {
+        min-width: 70px;
+    }
+
+    .social-icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon-circle img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .back-home a {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
