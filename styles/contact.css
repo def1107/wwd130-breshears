@@ -54,7 +54,10 @@ nav {
 
 #Collin_Breshears img {
     height: 60px;
+    border: solid white 2px;
+    border-radius: 2px;
 }
+
 
 nav ul {
     display: flex;
